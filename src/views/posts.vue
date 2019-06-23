@@ -3,7 +3,7 @@
         <h5 v-if="loading">Loading ...</h5>
         <div v-else>
             <div class="title" v-for="(post, index) in posts" :key="index">
-                <router-link :to="{name: 'post-show', params: {id: post.id}}">{{post.title}}</router-link>
+                <router-link :to="{name: 'post-show', params: {id: post.id}}">{{post.title | capitalize}}</router-link>
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     #posts {
         width: 50%;
         margin: auto;

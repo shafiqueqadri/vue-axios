@@ -2,9 +2,9 @@
     <div id="posts">
         <h5 v-if="loading">Loading ...</h5>
         <div v-else>
-            <div class="title">{{post.title}}</div>
+            <div class="title">{{post.title | capitalize}}</div>
             <div id="description">
-                {{post.body}}
+                {{post.body | capitalize}}
             </div>
             <button @click="$router.back()">Go Back</button>
         </div>
@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     #posts {
         width: 50%;
         margin: auto;
