@@ -22,6 +22,8 @@ export default {
         }
     },
     mounted () {
+        console.log(this.API$);
+        
         this.getPost();
         
     },
